@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-const Widget =styled.div`
+import styled from 'styled-components';
+
+const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -42,10 +43,28 @@ display:flex;
 justify-content: flex-start;
 align-items: center;
 padding: 18px 32px;
-background-color : ${({theme}) => theme.colors.primary};
+background-color : ${({ theme }) => theme.colors.primary};
 
 *{
   margin: 0;
 }`;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-align: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color : ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5s;
+  }
+`;
 
 export default Widget;
